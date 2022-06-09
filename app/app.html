@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="app">
+        <div class="download">
+            <div class="mp4">
+                <input type="text" name="" placeholder="https://youtube.com..." id="mp4Input">
+                <div class="quality">
+                    <div class="p360">
+                        <input type="radio" checked name="qual" id="360">
+                        <label for="360">360p</label>
+                    </div>
+                    <div class="p720">
+                        <input type="radio" name="qual" id="720">
+                        <label for="720">720p</label>
+                    </div>
+                </div>
+                <button id="mp4Button">Download your video</button>
+            </div>
+            <div class="mp3">
+                <input type="text" name="" placeholder="https://youtube.com..." id="mp3Input">
+                <button id="mp3Button">Download your music</button>
+            </div>
+        </div>
+        <div class="options">
+            <h1>OPTIONS</h1>
+            <div class="path">
+                <label for="pathText">Path download</label>
+                <input type="text" name="" id="pathText">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

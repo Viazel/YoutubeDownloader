@@ -1,0 +1,140 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #333;
+}
+
+button {
+    cursor: pointer;
+}
+
+.app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #444;
+    height: 80%;
+    width: 80%;
+    border-radius: 25px;
+}
+
+.download {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mp4 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quality {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.p360, .p720 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+}
+
+.quality label {
+    font-size: 1.5rem;
+}
+
+.quality input[type="radio"] {
+    transform: scale(150%);
+}
+
+.mp4 input[type="text"] {
+    font-size: 2rem;
+    width: 90%;
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    text-indent: 20px;
+}
+
+.mp4 button {
+    height: 50px;
+    width: 90%;
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.mp3 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mp3 input[type="text"] {
+    font-size: 2rem;
+    width: 90%;
+    border-radius: 25px;
+    border: none;
+    height: 50px;
+    text-indent: 20px;
+}
+
+.mp3 button {
+    height: 50px;
+    width: 90%;
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.options {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.path label {
+    margin-right: 10px;
+}
+
+.path input {
+    width: 240px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    text-indent: 10px;
+}
