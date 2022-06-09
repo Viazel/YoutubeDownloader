@@ -42,7 +42,7 @@ class YoutubeDownload {
                 responseType: "json",
                 data: {url: this.url}
             }).then(resp => {
-                urlDownload = resp.data.url[0].url;
+                urlDownload = resp.data.mp3Converter;
                 urlName = resp.data.meta.title;
                 axios({
                     method: "GET",
