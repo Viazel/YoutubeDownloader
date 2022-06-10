@@ -49,7 +49,9 @@ class YoutubeDownload {
                     url: urlDownload,
                     responseType: "stream"
                 }).then(response => {
-                    response.data.pipe(fs.createWriteStream(`${this.path}\\${urlName}.mp3`))
+                    response.data.pipe(fs.createWriteStream(`${this.path}\\${urlName}.mp3`)).on("finish", () => {
+                        console.log("Download finish !")
+                    })
                 })
             })
 
@@ -71,7 +73,9 @@ class YoutubeDownload {
                     url: urlDownload,
                     responseType: "stream"
                 }).then(response => {
-                    response.data.pipe(fs.createWriteStream(`${this.path}/${urlName}.mp4`))
+                    response.data.pipe(fs.createWriteStream(`${this.path}/${urlName}.mp4`)).on("finish", () => {
+                        console.log("Download finish !")
+                    })
                 })
             })
         }
