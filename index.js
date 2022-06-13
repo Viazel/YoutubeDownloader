@@ -3,6 +3,8 @@ const path = require("path");
 const Youtube = require("./app/utils/YoutubeDownload");
 const ytb = new Youtube();
 
+app.disableHardwareAcceleration();
+
 function createWindow() {
     const win = new BrowserWindow({
         height: 720,
