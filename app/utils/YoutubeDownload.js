@@ -42,7 +42,12 @@ class YoutubeDownload {
                 responseType: "json",
                 data: {url: this.url}
             }).then(resp => {
-                urlDownload = resp.data.mp3Converter;
+                urlDownload = undefined;
+                if(resp.data.mp3Converter === undefined){
+                    urlDownload = resp.data.diffConverter;
+                }else {
+                    urlDownload = resp.data.mp3Converter;
+                }
                 urlName = resp.data.meta.title;
                 axios({
                     method: "GET",
@@ -50,7 +55,7 @@ class YoutubeDownload {
                     responseType: "stream"
                 }).then(response => {
                     response.data.pipe(fs.createWriteStream(`${this.path}\\${urlName}.mp3`)).on("finish", () => {
-                        console.log("Download finish !")
+                        console.log("Download finish")
                     })
                 })
             })
@@ -73,8 +78,8 @@ class YoutubeDownload {
                     url: urlDownload,
                     responseType: "stream"
                 }).then(response => {
-                    response.data.pipe(fs.createWriteStream(`${this.path}/${urlName}.mp4`)).on("finish", () => {
-                        console.log("Download finish !")
+                    response.data.pipe(fs.createWriteStream(`${this.path}/${urlName}.mp4`)).on("finish", e => {
+                        console.log("Download finish")
                     })
                 })
             })

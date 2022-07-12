@@ -25,6 +25,10 @@ function createWindow() {
     ipcMain.on("download", (evt, data) => {
         ytb.download(data.url, data.quality);
     })
+
+    ipcMain.on("finish", (evt, data) => {
+        console.log("Download finish")
+    })
 }
 
 app.whenReady().then(createWindow);
